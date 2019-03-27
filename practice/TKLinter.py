@@ -46,7 +46,7 @@ check_variables(all_files)
 
 
 
-
+# Comments Section for future code development
 # for file in all_files:
 #     with open(file) as f:  
 #         data = f.read()
