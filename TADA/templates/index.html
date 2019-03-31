@@ -26,11 +26,13 @@
         <div class="rightside d-flex justify-content-center align-items-center">
           <div>
             
-            <form>
-              <input id="tohide" type="file" hidden="hidden" />
+            <form method="POST" action="/upload" enctype="multipart/form-data">
+              <input id="tohide" type="file" name="inputFile" hidden="hidden" />
               <input class="btn btn-outline-dark btn-lg" type="button" value="Upload an Excel" 
                       onclick="document.getElementById('tohide').click()" />
-              <span id="small-tags" class="text-dark">No file to upload.</span>
+              <span id="small-tags" class="text-dark">No file to uploaded, yet! Please select a file with ".xlsx" extension.</span>
+              <br><br>
+              <input class="btn btn-outline-primary btn-lg" type="submit" value="SUBMIT" />
       
               <script type="text/javascript">
                 const realFileBtn = document.getElementById("tohide");
