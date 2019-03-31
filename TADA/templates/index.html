@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/style.css" type="text/css">
+    <title>Auto Deploy</title>
+  </head>
+  <body>
+    <div class="row no-gutters">
+      <div class="col-md-3 no-gutters">
+          <div class="leftside d-flex align-items-center">
+            <div class="display-1 text-white-75">
+              <ul class="nav">
+                <li class="nav-item">THE</li>
+                <li class="nav-item">AUTO</li>
+                <li class="nav-item">DEPLOY</li>
+                <li class="nav-item">APP</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9 no-gutters">
+        <div class="rightside d-flex justify-content-center align-items-center">
+          <div>
+            
+            <form>
+              <input id="tohide" type="file" hidden="hidden" />
+              <input class="btn btn-outline-dark btn-lg" type="button" value="Upload an Excel" 
+                      onclick="document.getElementById('tohide').click()" />
+              <span id="small-tags" class="text-dark">No file to upload.</span>
+      
+              <script type="text/javascript">
+                const realFileBtn = document.getElementById("tohide");
+                const customTxt = document.getElementById("small-tags");
+      
+                realFileBtn.addEventListener("change", function() {
+                  if (realFileBtn.value) {
+                    customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                  } else {
+                    customTxt.innerHTML = "No file to upload.";
+                  }
+                });
+              </script>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </body> 
+</html>
