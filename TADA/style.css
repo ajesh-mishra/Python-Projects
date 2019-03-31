@@ -1,11 +1,51 @@
-body {
-  background-color: rgb(1, 1, 10);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-h1 {
-  text-align: left;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+.leftside, .rightside {
+  height: 50vh;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .leftside, .rightside {
+    height: 100vh;
+  }
+}
+
+.leftside {
+  background: black;
+}
+
+.rightside {
+  background: white;
+}
+
+/* #tohide {
+  visibility: hidden;
+} */
+
+.good-button {
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: blue;
+  font-size: large;
+  font-weight: 500;
+  color: blue;
+  background-color: white;
+  height: 30px;
+  padding: 0px 5px;
+}
+
+.good-button:hover {
+  background-color: blue;
   color: white;
+  cursor: pointer;
+}
+
+#small-tags {
+  color: blue;
+  margin-left: 10px;
 }
