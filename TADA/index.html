@@ -11,22 +11,24 @@
   <body>
     <div class="row no-gutters">
       <div class="col-md-3 no-gutters">
-        <div class="leftside">
-          <ul class="nav">
-            <li class="nav-item display-1 text-muted align-items-start">THE</li>
-            <li class="nav-item display-1 text-muted align-items-start">AUTO</li>
-            <li class="nav-item display-1 text-muted align-items-start">DEPLOY</li>
-            <li class="nav-item display-1 text-muted align-items-start">APP</li>
-            </ul>
+          <div class="leftside d-flex align-items-center">
+            <div class="display-1 text-white-75">
+              <ul class="nav">
+                <li class="nav-item">THE</li>
+                <li class="nav-item">AUTO</li>
+                <li class="nav-item">DEPLOY</li>
+                <li class="nav-item">APP</li>
+              </ul>
+          </div>
         </div>
       </div>
       <div class="col-md-9 no-gutters">
         <div class="rightside d-flex align-items-center justify-content-center">
           <form>
             <input id="tohide" type="file" hidden="hidden" />
-            <input class="btn btn-outline-primary btn-lg" type="button" value="Upload an Excel" 
+            <input class="btn btn-outline-dark btn-lg" type="button" value="Upload an Excel" 
                     onclick="document.getElementById('tohide').click()" />
-            <span id="small-tags" class="text-primary">No file to upload.</span>
+            <span id="small-tags" class="text-dark">No file to upload.</span>
     
             <script type="text/javascript">
               const realFileBtn = document.getElementById("tohide");
@@ -43,12 +45,6 @@
           </form>
         </div>
       </div>
-    </div>
-
-
-
-    <div class="container">
-      
     </div>
   </body> 
 </html>
